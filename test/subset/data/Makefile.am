@@ -3,15 +3,17 @@
 NULL =
 EXTRA_DIST =
 CLEANFILES =
-SUBDIRS =
+SUBDIRS = repack_tests
 
 EXTRA_DIST += \
 	$(TESTS) \
 	expected/basics \
 	expected/full-font \
+	expected/glyf_bug_3131 \
 	expected/cff-full-font \
 	expected/japanese \
 	expected/cff-japanese \
+	expected/cff.notoserifmyanmar \
 	expected/layout \
 	expected/layout.gpos \
 	expected/layout.gpos2 \
@@ -23,19 +25,30 @@ EXTRA_DIST += \
 	expected/layout.gpos8.amiri \
 	expected/layout.gpos9 \
 	expected/layout.gsub3 \
+	expected/layout.gsub5 \
 	expected/layout.gsub6 \
+	expected/layout.gsub8 \
+	expected/layout.khmer \
 	expected/layout.gdef \
 	expected/layout.context \
 	expected/layout.gdef-varstore \
 	expected/layout.gdef-attachlist \
+	expected/layout.notonastaliqurdu \
 	expected/cmap \
 	expected/cmap14 \
 	expected/sbix \
 	expected/colr \
+	expected/colr_with_components \
 	expected/cbdt \
+	expected/variable \
+	expected/glyph_names \
 	fonts \
 	profiles \
 	$(NULL)
+
+# TODO: re-able once colrv1 subsetting is stabilized.
+#      	expected/colrv1
+#   	expected/colrv1.notoemoji
 
 # Convenience targets:
 lib:
